@@ -1,9 +1,15 @@
 # linconf
 Scripts for configuring debian style linux after installation
 
-** Install **
+### Install
+
+```
 ./linconf/lbs-install.sh
+```
 
 
-** Remove **
+### Remove 
+
+```
 ./linconf/lbs-remove.sh
+```
