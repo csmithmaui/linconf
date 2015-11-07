@@ -8,7 +8,9 @@ if [ -f ~/.vimrc.orig ]; then
 fi
 
 
-sed -i ' s/export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)//g' ~/.bashrc
+#Commenting this because the new command I added into the installer is more complex but sed can't replace it 
+#easily because it's multiline.
+#sed -i ' s/export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)//g' ~/.bashrc
 
 rm -rf ~/.dircolors
 
