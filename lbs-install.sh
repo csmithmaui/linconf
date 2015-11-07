@@ -24,8 +24,19 @@ git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git solari
 ~/solarized/gnome-terminal-colors-solarized/set_dark.sh
 
 touch ~/.bashrc
-echo "export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)" >> ~/.bashrc
-echo "export TERM=screen-256color" >> ~/.screenrc
+
+echo "
+case \"\$TERM\" in screen*)
+    export TERM=screen-256color
+    ;;
+*)
+    export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)
+    ;;
+esac
+" >> ~/.bashrc
+
+#echo "export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)" >> ~/.bashrc
+#echo "export TERM=screen-256color" >> ~/.screenrc
 
 echo "Successfully Installed Linux Bootstrap Script!"
 echo "Execute \`source .bashrc\` to complete."
